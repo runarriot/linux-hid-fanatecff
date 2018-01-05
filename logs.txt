@@ -741,3 +741,20 @@ HID Report
                 .... 00.. = bType: Main (0)
                 1100 .... = bTag: End collection (0xc)
 
+
+
+
+Enumerated Joystick : FANATEC CSL Elite Wheel Base
+Supported Effects : 
+   - Constant
+   - Ramp Force
+   - Square Wave
+   - Sine Wave
+   - Triangle Wave
+   - Sawtooth Up Wave
+   - Sawtooth Down Wave
+   - Spring
+   - Damper
+   - Inertia
+   - Friction
+   - CustomForce
