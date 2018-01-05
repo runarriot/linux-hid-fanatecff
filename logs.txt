@@ -1,7 +1,7 @@
 dmesg:
 [  305.528971] input: Fanatec FANATEC CSL Elite Wheel Base as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.0/0003:0EB7:0E03.0005/input/input22
 [  305.529124] hid-generic 0003:0EB7:0E03.0005: input,hidraw4: USB HID v1.11 Joystick [Fanatec FANATEC CSL Elite Wheel Base] on usb-0000:00:14.0-5/input0
-
+ 
 
 kern.log
 kernel: [  305.386473] usb 1-5: new full-speed USB device number 5 using xhci_hcd
@@ -722,7 +722,7 @@ HID Report
                 1001 .... = bTag: Report count (0x9)
             Report count: 7
         Main item (Output)
-            Header
+            Header 
                 .... ..01 = bSize: 1 byte (1)
                 .... 00.. = bType: Main (0)
                 1001 .... = bTag: Output (0x9)
