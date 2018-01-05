@@ -228,3 +228,27 @@ pinctrl_sunrisepoint 28672 0 - Live 0x0000000000000000
 i2c_hid 20480 0 - Live 0x0000000000000000
 pinctrl_intel 20480 1 pinctrl_sunrisepoint, Live 0x0000000000000000
 hid 118784 4 hid_fanatecff,hid_generic,usbhid,i2c_hid, Live 0x0000000000000000
+
+
+fftest
+Force feedback test program.
+HOLD FIRMLY YOUR WHEEL OR JOYSTICK TO PREVENT DAMAGES
+
+Device /dev/input/by-id/usb-Fanatec_FANATEC_CSL_Elite_Wheel_Base-event-joystick opened
+Features:
+  * Absolute axes: X, Y, Z, RX, RY, RZ, Throttle, Rudder, Hat 0 X, Hat 0 Y, 
+    [FF 00 03 00 00 00 00 00 ]
+  * Relative axes: 
+    [00 00 ]
+  * Force feedback effects types: 
+    Force feedback periodic effects: 
+    [00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ]
+  * Number of simultaneous effects: 0
+
+Uploading effect #0 (Periodic sinusoidal) ... Error:: Function not implemented
+Uploading effect #1 (Constant) ... Error: Function not implemented
+Uploading effect #2 (Spring) ... Error: Function not implemented
+Uploading effect #3 (Damper) ... Error: Function not implemented
+Uploading effect #4 (Strong rumble, with heavy motor) ... Error: Function not implemented
+Uploading effect #5 (Weak rumble, with light motor) ... Error: Function not implemented
+Enter effect number, -1 to exit
