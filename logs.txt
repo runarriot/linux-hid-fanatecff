@@ -1,0 +1,230 @@
+dmesg:
+[  305.528971] input: Fanatec FANATEC CSL Elite Wheel Base as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.0/0003:0EB7:0E03.0005/input/input22
+[  305.529124] hid-generic 0003:0EB7:0E03.0005: input,hidraw4: USB HID v1.11 Joystick [Fanatec FANATEC CSL Elite Wheel Base] on usb-0000:00:14.0-5/input0
+
+
+kern.log
+kernel: [  305.386473] usb 1-5: new full-speed USB device number 5 using xhci_hcd
+kernel: [  305.527426] usb 1-5: New USB device found, idVendor=0eb7, idProduct=0e03
+kernel: [  305.527427] usb 1-5: New USB device strings: Mfr=1, Product=8, SerialNumber=0
+kernel: [  305.527428] usb 1-5: Product: FANATEC CSL Elite Wheel Base
+kernel: [  305.527428] usb 1-5: Manufacturer: Fanatec
+kernel: [  305.528971] input: Fanatec FANATEC CSL Elite Wheel Base as /devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.0/0003:0EB7:0E03.0005/input/input22
+kernel: [  305.529124] hid-generic 0003:0EB7:0E03.0005: input,hidraw4: USB HID v1.11 Joystick [Fanatec FANATEC CSL Elite Wheel Base] on usb-0000:00:14.0-5/input0
+
+lsusb
+Bus 001 Device 005: ID 0eb7:0e03 Endor AG 
+Couldn't open device, some information will be missing
+Device Descriptor:
+  bLength                18
+  bDescriptorType         1
+  bcdUSB               2.00
+  bDeviceClass            0 (Defined at Interface level)
+  bDeviceSubClass         0 
+  bDeviceProtocol         0 
+  bMaxPacketSize0        64
+  idVendor           0x0eb7 Endor AG
+  idProduct          0x0e03 
+  bcdDevice            3.13
+  iManufacturer           1 
+  iProduct                8 
+  iSerial                 0 
+  bNumConfigurations      1
+  Configuration Descriptor:
+    bLength                 9
+    bDescriptorType         2
+    wTotalLength           41
+    bNumInterfaces          1
+    bConfigurationValue     1
+    iConfiguration          0 
+    bmAttributes         0x80
+      (Bus Powered)
+    MaxPower               80mA
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        0
+      bAlternateSetting       0
+      bNumEndpoints           2
+      bInterfaceClass         3 Human Interface Device
+      bInterfaceSubClass      0 No Subclass
+      bInterfaceProtocol      0 None
+      iInterface            254 
+        HID Device Descriptor:
+          bLength                 9
+          bDescriptorType        33
+          bcdHID               1.11
+          bCountryCode           33 US
+          bNumDescriptors         1
+          bDescriptorType        34 Report
+          wDescriptorLength     133
+         Report Descriptors: 
+           ** UNAVAILABLE **
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               1
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x01  EP 1 OUT
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               1
+
+
+
+
+/dev/input
+.
+./js0
+./event19
+./event18
+./event17
+./event16
+./event15
+./event14
+./event13
+./event12
+./event11
+./event10
+./event9
+./event8
+./event7
+./by-path
+./by-path/pci-0000:00:14.0-usb-0:5:1.0-event-joystick
+./by-path/pci-0000:00:14.0-usb-0:5:1.0-joystick
+./by-path/platform-eeepc-wmi-event
+./by-path/pci-0000:00:14.0-usb-0:13:1.0-event-mouse
+./by-path/pci-0000:00:14.0-usb-0:10:1.0-event-kbd
+./by-path/pci-0000:00:14.0-usb-0:13:1.1-event-kbd
+./by-path/pci-0000:00:14.0-usb-0:10:1.1-event
+./by-path/pci-0000:00:14.0-usb-0:13:1.0-mouse
+./by-id
+./by-id/usb-Fanatec_FANATEC_CSL_Elite_Wheel_Base-event-joystick
+./by-id/usb-Fanatec_FANATEC_CSL_Elite_Wheel_Base-joystick
+./by-id/usb-A....._G4-event-mouse
+./by-id/usb-04d9_USB_Keyboard-event-kbd
+./by-id/usb-A....._G4-if01-event-kbd
+./by-id/usb-04d9_USB_Keyboard-event-if01
+./by-id/usb-A....._G4-mouse
+./event6
+./event5
+./mouse0
+./event4
+./event3
+./event2
+./event1
+./event0
+./mice
+
+
+cat /proc/modules
+
+hid_fanatecff 16384 0 - Live 0x0000000000000000 (OE)
+nls_utf8 16384 1 - Live 0x0000000000000000
+isofs 45056 1 - Live 0x0000000000000000
+bnep 20480 2 - Live 0x0000000000000000
+nls_iso8859_1 16384 1 - Live 0x0000000000000000
+snd_hda_codec_hdmi 49152 1 - Live 0x0000000000000000
+intel_rapl 20480 0 - Live 0x0000000000000000
+eeepc_wmi 16384 0 - Live 0x0000000000000000
+asus_wmi 28672 1 eeepc_wmi, Live 0x0000000000000000
+wmi_bmof 16384 0 - Live 0x0000000000000000
+sparse_keymap 16384 1 asus_wmi, Live 0x0000000000000000
+mxm_wmi 16384 0 - Live 0x0000000000000000
+x86_pkg_temp_thermal 16384 0 - Live 0x0000000000000000
+intel_powerclamp 16384 0 - Live 0x0000000000000000
+coretemp 16384 0 - Live 0x0000000000000000
+kvm 581632 0 - Live 0x0000000000000000
+irqbypass 16384 1 kvm, Live 0x0000000000000000
+snd_seq_midi 16384 0 - Live 0x0000000000000000
+crct10dif_pclmul 16384 0 - Live 0x0000000000000000
+snd_seq_midi_event 16384 1 snd_seq_midi, Live 0x0000000000000000
+snd_hda_codec_realtek 94208 1 - Live 0x0000000000000000
+crc32_pclmul 16384 0 - Live 0x0000000000000000
+ghash_clmulni_intel 16384 0 - Live 0x0000000000000000
+pcbc 16384 0 - Live 0x0000000000000000
+snd_rawmidi 32768 1 snd_seq_midi, Live 0x0000000000000000
+snd_hda_codec_generic 73728 1 snd_hda_codec_realtek, Live 0x0000000000000000
+aesni_intel 188416 0 - Live 0x0000000000000000
+snd_hda_intel 40960 10 - Live 0x0000000000000000
+aes_x86_64 20480 1 aesni_intel, Live 0x0000000000000000
+crypto_simd 16384 1 aesni_intel, Live 0x0000000000000000
+snd_hda_codec 126976 4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel, Live 0x0000000000000000
+glue_helper 16384 1 aesni_intel, Live 0x0000000000000000
+cryptd 24576 3 ghash_clmulni_intel,aesni_intel,crypto_simd, Live 0x0000000000000000
+snd_seq 65536 2 snd_seq_midi,snd_seq_midi_event, Live 0x0000000000000000
+snd_hda_core 81920 5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec, Live 0x0000000000000000
+snd_hwdep 20480 1 snd_hda_codec, Live 0x0000000000000000
+intel_cstate 20480 0 - Live 0x0000000000000000
+nvidia_uvm 663552 0 - Live 0x0000000000000000 (POE)
+intel_rapl_perf 16384 0 - Live 0x0000000000000000
+snd_pcm 98304 4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0x0000000000000000
+snd_seq_device 16384 3 snd_seq_midi,snd_rawmidi,snd_seq, Live 0x0000000000000000
+snd_timer 32768 2 snd_seq,snd_pcm, Live 0x0000000000000000
+snd 81920 31 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_rawmidi,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_seq,snd_hwdep,snd_pcm,snd_seq_device,snd_timer, Live 0x0000000000000000
+mei_me 40960 0 - Live 0x0000000000000000
+joydev 20480 0 - Live 0x0000000000000000
+input_leds 16384 0 - Live 0x0000000000000000
+serio_raw 16384 0 - Live 0x0000000000000000
+mei 98304 1 mei_me, Live 0x0000000000000000
+shpchp 36864 0 - Live 0x0000000000000000
+soundcore 16384 1 snd, Live 0x0000000000000000
+hci_uart 106496 0 - Live 0x0000000000000000
+btbcm 16384 1 hci_uart, Live 0x0000000000000000
+serdev 20480 1 hci_uart, Live 0x0000000000000000
+btqca 16384 1 hci_uart, Live 0x0000000000000000
+btintel 16384 1 hci_uart, Live 0x0000000000000000
+bluetooth 540672 11 bnep,hci_uart,btbcm,btqca,btintel, Live 0x0000000000000000
+ecdh_generic 24576 1 bluetooth, Live 0x0000000000000000
+wmi 24576 3 asus_wmi,wmi_bmof,mxm_wmi, Live 0x0000000000000000
+intel_lpss_acpi 16384 0 - Live 0x0000000000000000
+intel_lpss 16384 1 intel_lpss_acpi, Live 0x0000000000000000
+acpi_als 16384 0 - Live 0x0000000000000000
+kfifo_buf 16384 1 acpi_als, Live 0x0000000000000000
+mac_hid 16384 0 - Live 0x0000000000000000
+acpi_pad 180224 0 - Live 0x0000000000000000
+industrialio 69632 2 acpi_als,kfifo_buf, Live 0x0000000000000000
+parport_pc 32768 0 - Live 0x0000000000000000
+ppdev 20480 0 - Live 0x0000000000000000
+lp 20480 0 - Live 0x0000000000000000
+parport 49152 3 parport_pc,ppdev,lp, Live 0x0000000000000000
+ip_tables 24576 0 - Live 0x0000000000000000
+x_tables 40960 1 ip_tables, Live 0x0000000000000000
+autofs4 40960 2 - Live 0x0000000000000000
+hid_generic 16384 0 - Live 0x0000000000000000
+usbhid 49152 0 - Live 0x0000000000000000
+uas 24576 0 - Live 0x0000000000000000
+usb_storage 69632 2 uas, Live 0x0000000000000000
+nvidia_drm 45056 4 - Live 0x0000000000000000 (POE)
+nvidia_modeset 843776 8 nvidia_drm, Live 0x0000000000000000 (POE)
+nvidia 13004800 599 nvidia_uvm,nvidia_modeset, Live 0x0000000000000000 (POE)
+drm_kms_helper 167936 1 nvidia_drm, Live 0x0000000000000000
+syscopyarea 16384 1 drm_kms_helper, Live 0x0000000000000000
+sysfillrect 16384 1 drm_kms_helper, Live 0x0000000000000000
+e1000e 245760 0 - Live 0x0000000000000000
+sysimgblt 16384 1 drm_kms_helper, Live 0x0000000000000000
+psmouse 147456 0 - Live 0x0000000000000000
+fb_sys_fops 16384 1 drm_kms_helper, Live 0x0000000000000000
+nvme 32768 2 - Live 0x0000000000000000
+ptp 20480 1 e1000e, Live 0x0000000000000000
+drm 356352 7 nvidia_drm,drm_kms_helper, Live 0x0000000000000000
+nvme_core 53248 4 nvme, Live 0x0000000000000000
+pps_core 20480 1 ptp, Live 0x0000000000000000
+ahci 36864 0 - Live 0x0000000000000000
+libahci 32768 1 ahci, Live 0x0000000000000000
+video 40960 1 asus_wmi, Live 0x0000000000000000
+pinctrl_sunrisepoint 28672 0 - Live 0x0000000000000000
+i2c_hid 20480 0 - Live 0x0000000000000000
+pinctrl_intel 20480 1 pinctrl_sunrisepoint, Live 0x0000000000000000
+hid 118784 4 hid_fanatecff,hid_generic,usbhid,i2c_hid, Live 0x0000000000000000
