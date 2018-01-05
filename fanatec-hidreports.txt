@@ -8,6 +8,19 @@ FFB - Send force
 0108(6f) - rotate right
 0108(8f) - rotate left
 
+1st - slot
+2nd - 1 enable, 3 disable
+34 - 08 - ff commands
+56 - force...
+
+01:08:01:00:00:00:00 --1slot on
+11:08:01:00:00:00:00 --2slot on
+21:08:01:00:00:00:00 --3slot on
+03:08:01:00:00:00:00 --1slot off
+13:08:01:00:00:00:00 --2slot off
+23:08:01:00:00:00:00 --3slot off
+
+
 FFB-test (loop)
 {
 01:08:01:00:00:00:00
@@ -17,6 +30,11 @@ Off - 03:08:00:00:00:00:00
 
 Friction enable 21:0c:08:00:08:00:ff
 Friction disable 23:0c:00:00:00:00:ff
+
+slot-1
+31:0c:08:00:08:00:ff on 
+33:0c:00:00:00:00:ff off
+
 
 Damper (loop)
 {
@@ -34,6 +52,9 @@ Innertia (loop)
 43:0c:00:00:00:00:ff -- off
 
 
+Spring
+21:0b:80:80:11:00:ff --on
+61:0b:80:80:11:00:ff
 
 Control wheel: (9 leds)
 SteeringWheel leds:
