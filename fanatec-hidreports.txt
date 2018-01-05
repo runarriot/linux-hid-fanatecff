@@ -91,8 +91,7 @@ F8:09:01:02:63:63:63
 
 Vibration:
 Off f8:09:01:03:ff:ff:00
-On f8:09:01:03:ff:ff:01
-
+On f8:09:01:03:ff:ff:01 - ff:ff - two independent forces 00-ff 
 
 
 Set range:
